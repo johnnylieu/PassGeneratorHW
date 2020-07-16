@@ -18,9 +18,10 @@ var confirmLowerCase;
 // How many characters would you like in your password?
 function writePassword () {
   var confirmLength = prompt("How many characters would you like in your password?");
+}
 
 // Loop back if not valid
-if(confirmLength <= 7 || confirmLength >= 129) {
+if (confirmLength <= 7 || confirmLength >= 129) {
   alert("Password must be within 8 to 128 characters, please try again.");
   var confirmLength = prompt("How many characters would you like in your password?");
 }

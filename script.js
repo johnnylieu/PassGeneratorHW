@@ -21,7 +21,7 @@ function writePassword() {
 }
 
 // Loop back if not valid selection
-if (confirmLength <= 7 || confirmLength >= 129) {
+while(confirmLength <= 7 || confirmLength >= 129) {
   alert("Password must be within 8 to 128 characters, please try again.");
   var confirmLength = prompt("How many characters would you like in your password?");
 }
@@ -36,7 +36,7 @@ var confirmUpperCase = confirm("Click ok if you want upper cases in your passwor
 var confirmLowerCase = confirm("Click ok if you want lower cases in your password");
 
 // If user does not choose any options, then loop back
-if (confirmSpecialChars === false && confirmNumbers === false && confirmUpperCase === false && confirmLowerCase === false) {
+while(confirmSpecialChars === false && confirmNumbers === false && confirmUpperCase === false && confirmLowerCase === false) {
   alert("Please choose at least one parameter");
   var confirmSpecialChars = confirm("Click ok if you want special characters in your password.");
   var confirmNumbers = confirm("Click ok if you want numbers in your password.");

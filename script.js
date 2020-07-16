@@ -4,7 +4,7 @@ document.querySelector("#generate").addEventListener("click", writePassword);
 
 // Arrays
 var number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-var specialChar = ['!', '@', '$', '%', '&', '+', '-', '.', '?','~'];
+var specialChar = ['!', '@', '$', '%', '&', '+', '-', '.', '?', '~'];
 var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -16,7 +16,7 @@ var confirmUpperCase;
 var confirmLowerCase;
 
 // How many characters would you like in your password?
-function writePassword () {
+function writePassword() {
   var confirmLength = prompt("How many characters would you like in your password?");
 }
 
@@ -27,7 +27,7 @@ if (confirmLength <= 7 || confirmLength >= 129) {
 }
 
 // Confirm characters
-  alert("Your password length is " + confirmLength + " characters");
+alert("Your password length is " + confirmLength + " characters");
 
 // Options for the user
 var confirmSpecialChars = confirm("Click ok if you want special characters in your password.");
@@ -35,11 +35,20 @@ var confirmNumbers = confirm("Click ok if you want numbers in your password.");
 var confirmUpperCase = confirm("Click ok if you want upper cases in your password");
 var confirmLowerCase = confirm("Click ok if you want lower cases in your password");
 
+// If user does not choose any options, then loop back
+if (confirmSpecialChars === false && confirmNumbers === false && confirmUpperCase === false && confirmLowerCase === false) {
+  alert("Please choose at least one parameter");
+  var confirmSpecialChars = confirm("Click ok if you want special characters in your password.");
+  var confirmNumbers = confirm("Click ok if you want numbers in your password.");
+  var confirmUpperCase = confirm("Click ok if you want upper cases in your password");
+  var confirmLowerCase = confirm("Click ok if you want lower cases in your password");
+}
+
 // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-//   passwordText.value = password;
+  passwordText.value = password;
 
-// }
+}

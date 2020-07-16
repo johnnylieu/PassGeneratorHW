@@ -20,7 +20,7 @@ function writePassword () {
   var confirmLength = prompt("How many characters would you like in your password?");
 }
 
-// Loop back if not valid
+// Loop back if not valid selection
 if (confirmLength <= 7 || confirmLength >= 129) {
   alert("Password must be within 8 to 128 characters, please try again.");
   var confirmLength = prompt("How many characters would you like in your password?");
@@ -28,6 +28,12 @@ if (confirmLength <= 7 || confirmLength >= 129) {
 
 // Confirm characters
   alert("Your password length is " + confirmLength + " characters");
+
+// Options for the user
+var confirmSpecialChars = confirm("Click ok if you want special characters in your password.");
+var confirmNumbers = confirm("Click ok if you want numbers in your password.");
+var confirmUpperCase = confirm("Click ok if you want upper cases in your password");
+var confirmLowerCase = confirm("Click ok if you want lower cases in your password");
 
 // Write password to the #password input
 // function writePassword() {

@@ -9,7 +9,7 @@ var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 // Variables
-var confirmLength = '';
+var confirmLength='';
 var confirmSpecialChars;
 var confirmNumbers;
 var confirmUpperCase;

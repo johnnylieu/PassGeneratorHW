@@ -3,7 +3,7 @@ After days of struggling and blowing up my tutor's slack, the class TA's slack, 
 
 ## Summary
 
-In this program, the user will choose between 8 and 128 characters, the user will choose whether or not to include special characters, numbers, lower case and upper case letters then the program will generate a password meeting these criteria.
+In this program, the user will choose between 8 and 128 characters, the user will choose whether or not to include special characters, numbers, lower case and upper case letters then the program will generate a password meeting this criteria.
 
 If the user chooses a character amount less than 8 characters or greater than 128 characters an error message will pop up and the same previous promp will initiate again.
 

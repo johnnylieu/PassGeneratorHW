@@ -16,6 +16,9 @@ function generatePassword() {
   var confirmUpperCase;
   var confirmLowerCase;
 
+  // introduction
+  alert('Welcome to Password Generator, created by Johnny Profits Studios.')
+
   // How many characters would you like in your password?
   function writePassword() {
     confirmLength = prompt("How many characters would you like in your password?");

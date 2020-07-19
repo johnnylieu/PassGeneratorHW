@@ -1,5 +1,5 @@
 ## Password Generator
-After days of struggling and blowing my tutor's slack, the class TA's slack, and the Google bar, I proudly present to you, the Password Generator (lol).
+After days of struggling and blowing up my tutor's slack, the class TA's slack, and the Google bar, I proudly present to you, the Password Generator (lol).
 
 ## Summary
 

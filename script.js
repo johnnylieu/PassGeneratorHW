@@ -78,6 +78,17 @@ function generatePassword() {
     options = confirm.concat(numbers, lowers);
   }
 
+  // 1 option
+  else if (confirmSpecialChars) {
+    options = chars;
+  } else if (confirmNumbers) {
+    options = numbers;
+  } else if (confirmUpperCase) {
+    options = uppers;
+  } else if (confirmLowerCase) {
+    options = lowers;
+  }
+
   return password;
 }
 

@@ -64,7 +64,19 @@ function generatePassword() {
   }
 
   // 2 options
-  else if ()
+  else if (confirmSpecialChars && confirmNumbers) {
+    options = confirm.concat(chars, numbers);
+  } else if (confirmSpecialChars && confirmLowerCase) {
+    options = confirm.concat(chars, numbers);
+  } else if (confirmSpecialChars && confirmUpperCase) {
+    options = confirm.concat(chars, uppers);
+  } else if (confirmLowerCase && confirmNumbers) {
+    options = confirm.concat(lowers, numbers);
+  } else if (confirmLowerCase && confirmUpperCase) {
+    options = confirm.concat(lowers, uppers);
+  } else if (confirmNumbers && confirmUpperCase) {
+    options = confirm.concat(numbers, lowers);
+  }
 
   return password;
 }

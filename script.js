@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// introduction
+alert('Welcome to Password Generator by Johnny L. Click on "Generate Password to begin.')
+
 function generatePassword() {
 
   // Arrays
@@ -15,9 +18,6 @@ function generatePassword() {
   var confirmNumbers;
   var confirmUpperCase;
   var confirmLowerCase;
-
-  // introduction
-  alert('Welcome to Password Generator, created by Johnny Profits Studios.')
 
   // How many characters would you like in your password?
   function writePassword() {

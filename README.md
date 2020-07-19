@@ -7,9 +7,9 @@ In this program, the user will choose between 8 and 128 characters, the user wil
 
 If the user chooses a character amount less than 8 characters or greater than 128 characters an error message will pop up and the same previous promp will initiate again.
 
-Once the user has passed that step, the user is then given the option to include special characters, numbers, lower chase letters, and/or upper case letters. If the user declines all these options then an error message will pop up and the previous prompt will initiate again.
+Once the user has passed that step, the user is then given the option to include special characters, numbers, lower case letters, and/or upper case letters. If the user declines all these options then an error message will pop up and the previous prompt will initiate again.
 
-https://johnnylieu.github.io/PassGeneratorHW/
+Try it here: https://johnnylieu.github.io/PassGeneratorHW/
 
 ## History
 

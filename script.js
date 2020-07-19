@@ -53,28 +53,28 @@ function generatePassword() {
 
   // 3 options
   else if (confirmSpecialChars && confirmNumbers && confirmUpperCase) {
-    options = confirm.concat(chars, numbers, uppers);
+    options = chars.concat(numbers, uppers);
   } else if (confirmSpecialChars && confirmNumbers && confirmLowercase) {
-    options = confirm.concat(chars, numbers, lowers);
+    options = chars.concat(numbers, lowers);
   } else if (confirmSpecialChars && confirmLowerCase && confirmUpperCase) {
-    options = confirm.concat(chars, lowers, uppers);
+    options = chars.concat(lowers, uppers);
   } else if (confirmNumbers && confirmLowerCase && confirmUpperCase) {
-    options = confirm.concat(numbers, lowers, uppers)
+    options = numbers.concat(lowers, uppers)
   }
 
   // 2 options
   else if (confirmSpecialChars && confirmNumbers) {
-    options = confirm.concat(chars, numbers);
+    options = chars.concat(numbers);
   } else if (confirmSpecialChars && confirmLowerCase) {
-    options = confirm.concat(chars, numbers);
+    options = chars.concat(lowers);
   } else if (confirmSpecialChars && confirmUpperCase) {
-    options = confirm.concat(chars, uppers);
+    options = chars.concat(uppers);
   } else if (confirmLowerCase && confirmNumbers) {
-    options = confirm.concat(lowers, numbers);
+    options = lowers.concat(numbers);
   } else if (confirmLowerCase && confirmUpperCase) {
-    options = confirm.concat(lowers, uppers);
+    options = lowers.concat(uppers);
   } else if (confirmNumbers && confirmUpperCase) {
-    options = confirm.concat(numbers, lowers);
+    options = numbers.concat(lowers);
   }
 
   // 1 option

@@ -4,13 +4,13 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
 
   // Arrays
-  var number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  var specialChar = ['!', '@', '$', '%', '&', '+', '-', '.', '?', '~'];
-  var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  var chars = ['!', '@', '$', '%', '&', '+', '-', '.', '?', '~'];
+  var lowers = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  var uppers = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
   // Variables
-  var confirmLength='';
+  var confirmLength = '';
   var confirmSpecialChars;
   var confirmNumbers;
   var confirmUpperCase;
@@ -23,7 +23,7 @@ function generatePassword() {
   writePassword()
 
   // Loop back if not valid selection
-  while(confirmLength <= 7 || confirmLength >= 129) {
+  while (confirmLength < 8 || confirmLength > 128) {
     alert("Password must be within 8 to 128 characters, please try again.");
     confirmLength = prompt("How many characters would you like in your password?");
   }
@@ -38,7 +38,7 @@ function generatePassword() {
   confirmLowerCase = confirm("Click ok if you want lower cases in your password");
 
   // If user does not choose any options, then loop back
-  while(confirmSpecialChars === false && confirmNumbers === false && confirmUpperCase === false && confirmLowerCase === false) {
+  while (confirmSpecialChars === false && confirmNumbers === false && confirmUpperCase === false && confirmLowerCase === false) {
     alert("Please choose at least one parameter");
     confirmSpecialChars = confirm("Click ok if you want special characters in your password.");
     confirmNumbers = confirm("Click ok if you want numbers in your password.");
@@ -52,7 +52,6 @@ function generatePassword() {
   }
 
   // 3 options
-
   else if (confirmSpecialChars && confirmNumbers && confirmUpperCase) {
     options = confirm.concat(chars, numbers, uppers);
   } else if (confirmSpecialChars && confirmNumbers && confirmLowercase) {
@@ -92,11 +91,12 @@ function generatePassword() {
   // options are returned as a password
   var password = [];
 
-  // random selection using JS math code, found this code on GitHub
+  // random selection using JS math code
   for (var i = 0; i < confirmLength; i++) {
     var userOptions = options[Math.floor(Math.random() * options.length)];
     password.push(userOptions);
   }
+  return password;
 }
 
 // Write password to the #password input

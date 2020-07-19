@@ -48,7 +48,7 @@ function generatePassword() {
 
   // If all 4 options are chosen
   if (confirmSpecialChars && confirmNumbers && confirmUpperCase & confirmLowerCase) {
-    options = confirm.concat(numbers, chars, uppers, lowers)
+    options = chars.concat(numbers, uppers, lowers)
   }
 
   // 3 options

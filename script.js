@@ -2,7 +2,8 @@
 var generateBtn = document.querySelector("#generate");
 
 // introduction
-alert("Welcome to Password Generator by Johnny L. Click 'Generate Password' & follow the prompts to begin.")
+alert("Welcome to Password Generator by Johnny L.");
+alert("Click 'Generate Password' & follow the prompts to begin.");
 
 function generatePassword() {
 

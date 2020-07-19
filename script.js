@@ -89,6 +89,7 @@ function generatePassword() {
     options = lowers;
   }
 
+  // options are returned as a password
   return password;
 }
 

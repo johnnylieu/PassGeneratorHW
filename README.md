@@ -17,8 +17,6 @@ https://github.com/johnnylieu/PassGeneratorHW/commits/master
 
 ## Screenshot
 
-This is a preview of my "About Me" page:
-
 ![Password Generator](passwordGenerator.bmp)
 
 ## Credits

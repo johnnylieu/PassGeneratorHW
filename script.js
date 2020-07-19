@@ -96,7 +96,7 @@ function generatePassword() {
     var userOptions = options[Math.floor(Math.random() * options.length)];
     password.push(userOptions);
   }
-  return password;
+  return password.join("");
 }
 
 // Write password to the #password input

@@ -90,7 +90,7 @@ function generatePassword() {
   }
 
   // options are returned as a password
-  return password;
+  var password = [];
 
   // random selection using JS math code, found this code on GitHub
   for (var i = 0; i < confirmLength; i++) {

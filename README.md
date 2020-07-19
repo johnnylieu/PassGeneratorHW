@@ -15,7 +15,7 @@ https://johnnylieu.github.io/PassGeneratorHW/
 
 https://github.com/johnnylieu/PassGeneratorHW/commits/master
 
-## Screenshots
+## Screenshot
 
 This is a preview of my "About Me" page:
 
